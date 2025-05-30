@@ -5,7 +5,7 @@
             alt="Profile Picture"
             class="img-fluid rounded-circle profile-img mb-3">
         <h5 class="card-title">{{ user.name }}</h5>
-        <p class="card-text text-muted">{{ user.bio }}</p>
+        <div class="card-text text-muted user-bio" [innerHTML]="user.bio | markdown"></div>
     </div>
     </div>
 </ng-container>
