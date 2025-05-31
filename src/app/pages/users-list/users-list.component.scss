@@ -1,21 +1,29 @@
 img {
-  max-width: 12rem;
-  max-height: 12rem;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .card-container {
-  margin-top: 16px;
-  margin-bottom: 16px;
-    
-  background-color: #ffffff; /* default background */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-height: 25%; // Adjust based on how many cards you expect in 80vh
+
+  background-color: #ffffff;
   transition: background-color 0.3s ease-in-out;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &:hover {
-    background-color: #f8f9fa;
-  }  
-  
+    background-color: #F3E1C9;
+  }
+
   .row {
     align-items: center;
+    height: 100%;
+    width: 100%;
 
     @media (max-width: 576px) {
       flex-direction: column;
@@ -29,17 +37,16 @@ img {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-      }
-
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
+        width: 100%;
       }
     }
   }
 
   .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @media (max-width: 576px) {
       padding-top: 1rem;
     }
