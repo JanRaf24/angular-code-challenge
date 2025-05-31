@@ -6,13 +6,15 @@ import { catchError, Observable, of } from 'rxjs';
 import { UserData } from 'src/model/user-data';
 import { ActivatedRoute, Router } from '@angular/router';
 import { isNumber } from 'src/utils/number';
+import { fadeInUpTrigger } from 'src/app/animations';
 
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
   styleUrls: ['./user-details.component.scss'],
   standalone: true,
-  imports: [CommonModule, MarkdownPipe]
+  imports: [CommonModule, MarkdownPipe],
+  animations: [fadeInUpTrigger()]
 })
 export class UserDetailsComponent implements OnInit{
 

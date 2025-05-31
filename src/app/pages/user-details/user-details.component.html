@@ -1,9 +1,9 @@
 <ng-container *ngIf="user$ | async as user">
-    <div class="container d-flex justify-content-center py-5">
-        <div class="card profile-card shadow-sm text-center">
+    <div class="container d-flex justify-content-center py-5" [@fadeInUp]>
+        <div class="card profile-card shadow-lg text-center d-flex gap-3">
             <img [src]="user.profilePicture"
                 alt="Profile Picture"
-                class="img-fluid rounded-circle profile-img" />
+                class="img-fluid rounded-circle shadow-sm profile-img" />
             <h5 class="card-title">{{ user.name }}</h5>
             <div class="user-bio" [innerHTML]="user.bio | markdown"></div>
         </div>
