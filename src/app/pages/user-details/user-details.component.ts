@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
-import { MarkdownPipe } from "../pipes/markdown.pipe";
+import { UserService } from '../../services/user/user.service';
+import { MarkdownPipe } from "../../pipes/markdown/markdown.pipe";
 import { CommonModule } from '@angular/common';
 import { catchError, Observable, of } from 'rxjs';
 import { UserData } from 'src/model/user-data';
