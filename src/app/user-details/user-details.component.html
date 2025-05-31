@@ -1,0 +1,11 @@
+<ng-container *ngIf="user$ | async as user">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card profile-card shadow-sm text-center p-4">
+        <img [src]="user.profilePicture"
+            alt="Profile Picture"
+            class="img-fluid rounded-circle profile-img mb-3">
+        <h5 class="card-title">{{ user.name }}</h5>
+        <p class="card-text text-muted">{{ user.bio }}</p>
+    </div>
+    </div>
+</ng-container>
