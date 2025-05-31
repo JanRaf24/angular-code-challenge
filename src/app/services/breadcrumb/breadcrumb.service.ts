@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject, filter } from 'rxjs';
-import { removeDuplicates } from 'src/utils/array';
+import { removeDuplicates } from '@utils/array';
 
 export interface Breadcrumb {
   label: string;
@@ -59,6 +59,6 @@ export class BreadcrumbService {
       return this.buildBreadcrumbs(route.firstChild, url, breadcrumbs);
     }
 
-    return removeDuplicates(breadcrumbs, bd => `${bd.label}|${bd.url}`);
+    return removeDuplicates(breadcrumbs, (bd) => `${bd.label}|${bd.url}`);
   }
 }
