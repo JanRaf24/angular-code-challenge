@@ -2,3 +2,15 @@ img {
   max-width: 12rem;
   max-height: 12rem;
 }
+
+.card-container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+    
+  background-color: #ffffff; /* default background */
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
