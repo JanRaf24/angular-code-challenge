@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BreadcrumbService, Breadcrumb } from '../services/breadcrumb/breadcrumb.service';
+import { BreadcrumbService, Breadcrumb } from '../../services/breadcrumb/breadcrumb.service';
 import { Observable } from 'rxjs';
 
 @Component({

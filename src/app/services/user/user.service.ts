@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
 import {map, Observable, of} from 'rxjs';
-import {UserData} from '../../model/user-data';
+import {UserData, NewUserData} from 'src/model';
 import {UserPersistenceService} from './user-persistence.service';
-import {NewUserData} from '../../model/new-user-data';
-import {randomDelay} from '../../utils/rxjs';
+import {randomDelay} from 'src/utils/rxjs';
 
 
 @Injectable({providedIn: 'root'})
