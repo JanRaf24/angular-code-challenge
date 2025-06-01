@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {UserData} from '../../../model/user-data';
+import {UserData} from '@model/user-data';
 
 const INITIAL_DATA: readonly UserData[] = [
   {
