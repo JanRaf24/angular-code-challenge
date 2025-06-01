@@ -4,7 +4,7 @@
             <img [src]="user.profilePicture"
                 alt="Profile Picture"
                 class="img-fluid rounded-circle shadow-sm profile-img" />
-            <h5 class="card-title">{{ user.name }}</h5>
+            <h5 class="card-title user-name">{{ user.name }}</h5>
             <div class="user-bio" [innerHTML]="user.bio | markdown"></div>
         </div>
     </div>

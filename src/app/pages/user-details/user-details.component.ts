@@ -30,7 +30,10 @@ export class UserDetailsComponent implements OnInit{
 
     const id = this.activeRoute.snapshot.paramMap.get('id')!;
 
-    if(!isNumber(id)) this.backToUserList();
+    if(!isNumber(id)) {
+      this.backToUserList();
+      return;
+    }
 
     this.user$ = this.userService.findOneById(Number(id)).pipe(
       catchError( error => {
