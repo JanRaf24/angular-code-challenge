@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user/user.service';
-import { MarkdownPipe } from "../../pipes/markdown/markdown.pipe";
+import { UserService } from '@services/user';
+import { MarkdownPipe } from "@pipes/markdown";
 import { CommonModule } from '@angular/common';
 import { catchError, Observable, of } from 'rxjs';
-import { UserData } from 'src/model/user-data';
+import { UserData } from '@model/index';
 import { ActivatedRoute, Router } from '@angular/router';
-import { isNumber } from 'src/utils/number';
-import { fadeInUpTrigger } from 'src/app/animations';
+import { isNumber } from '@utils/number';
+import { fadeInUpTrigger } from '@animation-presets/index';
 
 @Component({
   selector: 'app-user-details',

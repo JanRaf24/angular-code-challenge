@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {UserService} from 'src/app/services/user/user.service';
+import { Component } from '@angular/core';
+import { UserService } from '@services/user';
 import { CommonModule } from '@angular/common';
-import { staggeredCardTrigger } from 'src/app/animations';
+import { staggeredCardTrigger } from '@animation-presets/index';
 
 @Component({
   selector: 'app-users-list',
@@ -9,11 +9,10 @@ import { staggeredCardTrigger } from 'src/app/animations';
   styleUrls: ['./users-list.component.scss'],
   standalone: true,
   imports: [CommonModule],
-  animations: [staggeredCardTrigger()]
+  animations: [staggeredCardTrigger()],
 })
 export class UsersListComponent {
   public readonly users$ = this.userService.getAll();
 
-  constructor(private readonly userService: UserService) {
-  }
+  constructor(private readonly userService: UserService) {}
 }

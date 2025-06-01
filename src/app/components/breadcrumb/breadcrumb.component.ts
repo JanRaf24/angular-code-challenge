@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BreadcrumbService, Breadcrumb } from '../../services/breadcrumb/breadcrumb.service';
+import { BreadcrumbService, Breadcrumb } from '@services/breadcrumb';
 import { Observable } from 'rxjs';
-import { slideInRightTrigger, zoomInTrigger } from 'src/app/animations';
+import { slideInRightTrigger, zoomInTrigger } from '@animation-presets/index'
 
 @Component({
   selector: 'app-breadcrumb',
