@@ -1,18 +1,37 @@
 <ng-container *ngIf="breadcrumbs$ | async as breadcrumbs">
-    <nav aria-label="breadcrumb" class="container my-0 shadow rounded px-2 py-2 navbar navbar-expand-lg breadcrumb-container">
-        <div class="container-fluid">
-            <ol class="breadcrumb">
-                <li *ngFor="let breadcrumb of breadcrumbs; let last = last" class="breadcrumb-item"
-                    [class.active]="last" [attr.aria-current]="last ? 'page' : null">
-                    <ng-container *ngIf="!last">
-                        <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
-                        <span class="text-primary separator" *ngIf="!last" [@zoomIn]> {{ separator }} </span>
-                    </ng-container>
-                    <ng-container *ngIf="last">
-                        <span [@slideInRight]="breadcrumbs.length > 1 ? 'animate' : 'noAnimation'">{{ breadcrumb.label }}</span>
-                    </ng-container>
-                </li>
-            </ol>
-        </div>
-    </nav>
+  <nav
+    aria-label="breadcrumb"
+    class="container my-0 shadow rounded px-2 py-2 navbar navbar-expand-lg breadcrumb-container"
+  >
+    <div class="container-fluid">
+      <ol class="breadcrumb">
+        <li
+          *ngFor="let breadcrumb of breadcrumbs; let last = last"
+          class="breadcrumb-item"
+          [class.active]="last"
+          [attr.aria-current]="last ? 'page' : null"
+        >
+          <ng-container *ngIf="!last">
+            <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+            <span
+              class="text-primary separator"
+              *ngIf="!last"
+              [@zoomIn]
+            >
+              {{ separator }}
+            </span>
+          </ng-container>
+          <ng-container *ngIf="last">
+            <span
+              class="breadcrumb-label"
+              [@slideInRight]="
+                breadcrumbs.length > 1 ? 'animate' : 'noAnimation'
+              "
+              >{{ breadcrumb.label }}</span
+            >
+          </ng-container>
+        </li>
+      </ol>
+    </div>
+  </nav>
 </ng-container>
