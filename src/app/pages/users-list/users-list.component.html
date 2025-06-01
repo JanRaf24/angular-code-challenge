@@ -1,13 +1,15 @@
 <ng-container *ngIf="users$ | async as users">
-  <div class="card mb-2 shadow-sm card-container" *ngFor="let user of users">
-    <div class="row g-0">
-      <div class="col-md-4 col-lg-3">
-        <img [src]="user.profilePicture" class="img-fluid rounded-start" [alt]="user.name + 's profile picture'">
-      </div>
-      <div class="col-md-8 col-lg-9">
-        <div class="card-body text-md-start">
-          <h5 class="card-title">{{ user.name }}</h5>
-          <a [href]="user.id">Show profile</a>
+  <div [@staggerCards]>
+    <div class="card mb-2 shadow-sm card-container" *ngFor="let user of users">
+      <div class="row g-0">
+        <div class="col-md-4 col-lg-3">
+          <img [src]="user.profilePicture" class="img-fluid rounded-start" [alt]="user.name + 's profile picture'">
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <div class="card-body text-md-start">
+            <h5 class="card-title">{{ user.name }}</h5>
+            <a [href]="user.id">Show profile</a>
+          </div>
         </div>
       </div>
     </div>
